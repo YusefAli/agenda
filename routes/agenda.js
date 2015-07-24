@@ -49,6 +49,8 @@ module.exports = function(app,ss) {
     };
 
     ss.api.publish.all('newMessage', agenda);
+    console.log(agenda);
+
     /*agenda.save(function(err) {
               if(!err) {
                 console.log('Created'+agenda);
