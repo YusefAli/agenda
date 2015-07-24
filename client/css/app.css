@@ -1,0 +1,113 @@
+table.table{
+font-family: "Trebuchet MS", sans-serif;
+font-size: 3vw;
+font-weight: bold;
+line-height: 2em;
+}
+
+
+html{
+background-color: #66FF00;
+}
+
+
+
+thead{
+background-color: #66FF00;
+border-bottom-style: outset;
+color:white;
+}
+
+
+.atencion{
+animation: parpadeo 1s;
+-webkit-animation: parpadeo 1s;
+-moz-animation: parpadeo 1s;
+animation-iteration-count: 10;
+-webkit-animation-iteration-count: 10;
+-moz-animation-iteration-count: 10;
+background-color: #00FF66;
+}
+
+.atencion2{
+animation: parpadeo2 1s;
+-webkit-animation: parpadeo2 1s;
+-moz-animation: parpadeo2 1s;
+animation-iteration-count: 10;
+-webkit-animation-iteration-count: 10;
+-moz-animation-iteration-count: 10;
+
+
+}
+
+
+@keyframes parpadeo2 {
+0% {background-color: white}
+100%{background-color: #Yellow}
+}
+
+@-webkit-keyframes parpadeo2 {
+0% {background-color: white}
+100%{background-color: Yellow}
+}
+
+@keyframes parpadeo {
+0% {background-color: #00FF66}
+100%{background-color: Yellow}
+}
+
+@-webkit-keyframes parpadeo {
+0% {background-color: #00FF66}
+100%{background-color: Yellow}
+}
+
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+.carouselMio{
+    overflow:hidden;
+    width:100%;
+}
+.panesMio{
+    list-style:none;
+    position:relative;
+    width:500%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+        
+    -moz-animation:carouselMio 60s infinite;
+    -webkit-animation:carouselMio 60s infinite;
+    animation:carouselMio 60s infinite;
+}
+.panesMio > li{
+    position:relative;
+    float:left;
+    width:20%; /* 100 / number of panes */
+}
+.carouselMio img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+
+@keyframes carouselMio{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+
