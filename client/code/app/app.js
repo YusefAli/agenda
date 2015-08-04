@@ -29,8 +29,7 @@ ss.event.on('newMessage', function(message) {
     $('#tablaEspera tr').slice(1,2).remove();
   }
 
-  
-  document.getElementById('audio').stop();
+
   document.getElementById('audio').currentTime=0;
   document.getElementById('audio').play();
   // Append it to the #chatlog div and show effect
