@@ -23,6 +23,8 @@ ss.http.route('/', function(req, res){
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
 ss.client.templateEngine.use(require('ss-hogan'));
 
+ss.publish.transport.use('redis',{host: 'pub-redis-15488.us-west-2-1.1.ec2.garantiadata.com', port: 15488, pass: 'Orezipal1'});
+
 // Minimize and pack assets if you type: SS_ENV=production node app.js
 if (ss.env === 'production') ss.client.packAssets();
 
@@ -51,8 +53,8 @@ routes = require('./routes/agenda')(app,ss);
 	//}
 //});
 
-server.listen(process.env.PORT || 3000, function() {
-  console.log("Node server running on http://localhost:3000");
+server.listen(80, function() {
+  console.log("Node server running on"+ 80);
 });
 
 // Start SocketStream
