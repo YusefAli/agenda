@@ -25,15 +25,16 @@ ss.event.on('newMessage', function(message) {
   //numero de pacientes que aparecen en pantalla siempre impar
   if($('#tablaEspera tr').size() > 7)
   {
+   // $('#tablaEspera tr').slice(1,2).slideUp(500);
     $('#tablaEspera tr').slice(1,2).remove();
   }
 
   
-
+  document.getElementById('audio').stop();
   document.getElementById('audio').currentTime=0;
   document.getElementById('audio').play();
   // Append it to the #chatlog div and show effect
-  return $(html).appendTo('#chatlog');
+  return $(html).appendTo('#chatlog').slideDown();
 });
 
 
