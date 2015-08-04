@@ -8,6 +8,9 @@ ss.event.on('newMessage', function(message) {
 
   // Example of using the Hogan Template in client/templates/chat/message.jade to generate HTML for each message
   var html ;
+  
+  document.getElementById('audio').currentTime=0;
+  document.getElementById('audio').play();
 
   if($('#tablaEspera tr').size() % 2==0)
   {
@@ -30,10 +33,8 @@ ss.event.on('newMessage', function(message) {
   }
 
 
-  document.getElementById('audio').currentTime=0;
-  document.getElementById('audio').play();
   // Append it to the #chatlog div and show effect
-  return $(html).appendTo('#chatlog').slideDown();
+  return $(html).appendTo('#chatlog');
 });
 
 
