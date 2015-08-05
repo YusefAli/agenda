@@ -1,14 +1,17 @@
 'use strict';
-/* QUICK CHAT DEMO */
-
-// Delete this file once you've seen how the demo works
 
 // Listen out for newMessage events coming from the server
 ss.event.on('newMessage', function(message) {
+  //si existe la agenda no lo notificamos
+  if(document.getElementById(message._id))
+  {
+    return;
+  }
 
   // Example of using the Hogan Template in client/templates/chat/message.jade to generate HTML for each message
   var html ;
   
+  document.getElementById('audio').pause();
   document.getElementById('audio').currentTime=0;
   document.getElementById('audio').play();
 

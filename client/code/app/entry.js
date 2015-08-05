@@ -5,11 +5,17 @@
 window.ss = require('socketstream');
 
 ss.server.on('disconnect', function(){
-  console.log('Connection down :-(');
+	console.log('Connection down :-(');
 });
 
 ss.server.on('reconnect', function(){
+  
+  var d = new Date();
   console.log('Connection back up :-)');
+  
+  ss.rpc('demo.sendMessage', d.getTime());
+
+ 
 });
 
 ss.server.on('ready', function(){
@@ -21,5 +27,7 @@ ss.server.on('ready', function(){
     require('/app');
 
   });
+
+  ss.rpc('demo.sendMessage', 'Inicio');
 
 });

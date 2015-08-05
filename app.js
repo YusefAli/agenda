@@ -23,8 +23,8 @@ ss.http.route('/', function(req, res){
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
 ss.client.templateEngine.use(require('ss-hogan'));
 
-ss.publish.transport.use('redis',{host: 'pub-redis-15488.us-west-2-1.1.ec2.garantiadata.com', port: 15488, pass: 'Orezipal1'});
-ss.session.store.use('redis',{host: 'pub-redis-15488.us-west-2-1.1.ec2.garantiadata.com', port: 15488, pass: 'Orezipal1'});
+//ss.publish.transport.use('redis',{host: 'pub-redis-15488.us-west-2-1.1.ec2.garantiadata.com', port: 15488, pass: 'Orezipal1'});
+//ss.session.store.use('redis',{host: 'pub-redis-15488.us-west-2-1.1.ec2.garantiadata.com', port: 15488, pass: 'Orezipal1'});
 
 // Minimize and pack assets if you type: SS_ENV=production node app.js
 if (ss.env === 'production') ss.client.packAssets();
@@ -44,15 +44,15 @@ app.configure(function () {
 routes = require('./routes/agenda')(app,ss);
 
 
-//mongoose.connect('mongodb://localhost/agenda', function(err, res) {
+//mongoose.connect('mongodb://localhost/agenda2', function(err, res) {
 
-//mongoose.connect('mongodb://talon:04051984@ds053828.mongolab.com:53828/heroku_app19828412', function(err, res) {
-	//if(err) {
-		//console.log('ERROR: connecting to Database. ' + err);
-	//} else {
-		//console.log('Connected to Database');
-	//}
-//});
+mongoose.connect('mongodb://wellcare:wellcare@ds055792.mongolab.com:55792/agenda', function(err, res) {
+	if(err) {
+		console.log('ERROR: connecting to Database. ' + err);
+	} else {
+		console.log('Connected to Database');
+	}
+});
 
 server.listen(80, function() {
   console.log("Node server running on"+ 80);

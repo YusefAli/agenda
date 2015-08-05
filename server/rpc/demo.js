@@ -1,6 +1,8 @@
 'use strict';
 // Server-side Code
 
+var Agenda = require('../../models/agenda.js');
+
 // Define actions which can be called from the client using ss.rpc('demo.ACTIONNAME', param1, param2...)
 exports.actions = function(req, res, ss) {
 
@@ -13,12 +15,31 @@ exports.actions = function(req, res, ss) {
   return {
 
     sendMessage: function(message) {
-      if (message && message.length > 0) {         // Check for blank messages
-        ss.publish.all('newMessage', message);     // Broadcast the message to everyone
-        return res(true);                          // Confirm it was sent to the originating client
-      } else {
-        return res(false);
-      }
+
+      console.log('dentro de rpc'+message);
+      Agenda.find({}, function(err, agendas) {
+        if(!err) {
+          console.log('GET /agendas')
+          var fecha = new Date();
+          agendas.forEach(function(agenda) {
+            //5 minutos
+            if(agenda.insertado > fecha.getTime() - 300000)
+            {
+              ss.publish.all('newMessage', agenda);  
+            }
+            else
+            {
+              //console.log('borramos'+agenda);
+              agenda.remove();
+            }
+            //console.log(agenda);
+          });
+          return res(true);  
+        } else {
+          console.log('ERROR: ' + err);
+          return res(false);
+        }
+      });
     }
 
   };
