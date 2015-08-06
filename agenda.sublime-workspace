@@ -1,0 +1,176 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"de",
+				"desconexion"
+			],
+			[
+				"bor",
+				"border-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/zzz_WELLCARE/servidor/agenda/models/agenda.js",
+		"/E/zzz_WELLCARE/servidor/agenda/app.js",
+		"/E/zzz_WELLCARE/servidor/agenda/node_modules/socketstream/lib/socketstream.js",
+		"/E/zzz_WELLCARE/servidor/agenda/routes/agenda.js",
+		"/E/zzz_WELLCARE/servidor/agenda/node_modules/socketstream/bin/socketstream",
+		"/E/zzz_WELLCARE/servidor/agenda/client/code/app/app.js",
+		"/E/zzz_WELLCARE/servidor/agenda/client/templates/chat/message.html",
+		"/E/zzz_WELLCARE/servidor/agenda/client/css/app.css",
+		"/E/zzz_WELLCARE/servidor/agenda/client/views/app.html",
+		"/E/zzz_WELLCARE/servidor/agenda/client/css/libs/reset.css",
+		"/E/zzz_WELLCARE/servidor/agenda/server/rpc/demo.js",
+		"/E/zzz_WELLCARE/servidor/agenda/package.json",
+		"/E/zzz_WELLCARE/servidor/agenda/client/templates/chat/message2.html",
+		"/E/zzz_WELLCARE/servidor/agenda/node_modules/socketstream/package.json",
+		"/E/zzz_WELLCARE/servidor/agenda/client/static/bootstrap.min.css",
+		"/E/zzz_WELLCARE/servidor/node-api-rest-example-master/package.json",
+		"/E/zzz_WELLCARE/servidor/node-api-rest-example-master/app.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"E:\\zzz_WELLCARE\\servidor\\agenda",
+			"E:\\zzz_WELLCARE\\servidor\\agenda\\node_modules\\socketstream"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"publish",
+			"on(\"subscribe\"",
+			"redis",
+			"final",
+			"66FF00",
+			"http://www.clinicawellcaremedica.com/images/",
+			"../images/fondo_contenedor.jpg",
+			"#66FF00",
+			"tvshow",
+			"tvshows",
+			"TVShow"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"D1D1E0",
+			"",
+			"http://www.clinicawellcaremedica.com/images/fondo_contenedor.jpg",
+			"transparent url(\"../images/fondo_contenedor.jpg\")",
+			"agenda",
+			"Agenda"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true
+}
