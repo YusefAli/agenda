@@ -11,8 +11,7 @@ ss.event.on('newMessage', function(message) {
   // Example of using the Hogan Template in client/templates/chat/message.jade to generate HTML for each message
   var html ;
   
-  //document.getElementById('audio').pause();
-  //document.getElementById('audio').currentTime=0;
+  document.getElementById('audio').currentTime=0;
   document.getElementById('audio').play();
 
   if($('#tablaEspera tr').size() % 2==0)
