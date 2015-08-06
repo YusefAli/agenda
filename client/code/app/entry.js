@@ -30,6 +30,7 @@ ss.server.on('ready', function(){
 
 
   ss.rpc('auth.authenticate', sesion);
+  ss.rpc('demo.sendMessage', sesion);
  
 
 });

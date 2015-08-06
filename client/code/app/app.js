@@ -37,7 +37,7 @@ ss.event.on('newMessage', function(message) {
   }
 
   //numero de pacientes que aparecen en pantalla siempre impar
-  if($('#chatlog tr').size() > 9)
+  if($('#chatlog tr').size() > 7)
   {
    // $('#tablaEspera tr').slice(1,2).slideUp(500);
     $('#chatlog tr').slice(1,2).remove();
