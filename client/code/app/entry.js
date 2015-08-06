@@ -1,6 +1,6 @@
 'use strict';
 // This file automatically gets called first by SocketStream and must always exist
-var sesion=Math.random();
+var sesion=document.cookie;
 // Make 'ss' available to all modules and the browser console
 window.ss = require('socketstream');
 
@@ -11,9 +11,9 @@ ss.server.on('disconnect', function(){
 ss.server.on('reconnect', function(){
   
   var d = new Date();
-  console.log('Connection back up :-)'+sesion);
+  console.log('Connection back up :-)'+document.cookie);
   
-  ss.rpc('demo.sendMessage', sesion);
+  ss.rpc('demo.sendMessage', document.cookie);
 
  
 });
@@ -29,8 +29,8 @@ ss.server.on('ready', function(){
   });
 
 
-  ss.rpc('auth.authenticate', sesion);
-  ss.rpc('demo.sendMessage', sesion);
+  ss.rpc('auth.authenticate', document.cookie);
+  //ss.rpc('demo.sendMessage', document.cookie);
  
 
 });
