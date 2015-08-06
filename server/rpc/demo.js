@@ -26,11 +26,12 @@ exports.actions = function(req, res, ss) {
             if(agenda.insertado > fecha.getTime() - 300000)
             {
               ss.publish.user(message,'newMessage', agenda);  
+              //ss.publish.all('newMessage', agenda);
             }
             else
             {
               //console.log('borramos'+agenda);
-              agenda.remove();
+              //agenda.remove();
             }
             //console.log(agenda);
           });

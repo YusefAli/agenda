@@ -15,6 +15,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/code/app/app.js",
+			"settings":
+			{
+				"buffer_size": 1095,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/app.html",
+			"settings":
+			{
+				"buffer_size": 2822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/code/app/entry.js",
+			"settings":
+			{
+				"buffer_size": 736,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/rpc/demo.js",
+			"settings":
+			{
+				"buffer_size": 1235,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/rpc/auth.js",
+			"settings":
+			{
+				"buffer_size": 527,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/agenda.js",
+			"settings":
+			{
+				"buffer_size": 817,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -40,6 +88,7 @@
 	},
 	"file_history":
 	[
+		"/E/zzz_WELLCARE/servidor/gitAgenda/agenda/server/rpc/auth.js",
 		"/E/zzz_WELLCARE/servidor/agenda/models/agenda.js",
 		"/E/zzz_WELLCARE/servidor/agenda/app.js",
 		"/E/zzz_WELLCARE/servidor/agenda/node_modules/socketstream/lib/socketstream.js",
@@ -110,8 +159,177 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/code/app/app.js",
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								896,
+								896
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/views/app.html",
+					"settings":
+					{
+						"buffer_size": 2822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2662,
+								2669
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/code/app/entry.js",
+					"settings":
+					{
+						"buffer_size": 736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								465,
+								465
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/rpc/demo.js",
+					"settings":
+					{
+						"buffer_size": 1235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								864,
+								871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server/rpc/auth.js",
+					"settings":
+					{
+						"buffer_size": 527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "routes/agenda.js",
+					"settings":
+					{
+						"buffer_size": 817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

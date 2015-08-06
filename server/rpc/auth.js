@@ -8,12 +8,9 @@
       return {
         authenticate: function(username){
           // lookup user in DB, LDAP, etc
-          if (user) {
+          
             req.session.setUserId(username);
             res(true);
-          } else {
-            res('Access denied!');
-          }
         },
         logout: function(){
           req.session.setUserId(null);
