@@ -30,7 +30,7 @@ ss.server.on('ready', function(){
 
 
   ss.rpc('auth.authenticate', document.cookie);
-  //ss.rpc('demo.sendMessage', document.cookie);
+  ss.rpc('demo.sendMessage', document.cookie);
  
 
 });
