@@ -19,6 +19,15 @@ border-bottom:5px dotted  white;
 text-align: center
 }
 
+td:first-child{
+    -moz-border-radius:25px 0 0 25px;
+    -webkit-border-radius:25px 0 0 25px;
+}
+td:last-child{
+    -moz-border-radius:0 25px 25px 0;
+    -webkit-border-radius:0 25px 25px 0;
+}
+
 
 .atencion{
 animation: parpadeo 1s;
@@ -29,8 +38,7 @@ animation-iteration-count: 10;
 -moz-animation-iteration-count: 10;
 background-color: #00FF66;
 
-border: 2px solid white;
-border-radius: 25px;
+border: 2px solid blue;
 }
 
 .atencion2{
@@ -41,8 +49,7 @@ animation-iteration-count: 10;
 -webkit-animation-iteration-count: 10;
 -moz-animation-iteration-count: 10;
 
-border: 2px solid #00FF66;
-border-radius: 25px;
+border: 2px solid blue;
 
 
 }
