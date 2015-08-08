@@ -58,12 +58,12 @@ animation-iteration-count: 10;
 }
 
 @keyframes parpadeo {
-0% {background-color: ##9DCAD0}
+0% {background-color: #9DCAD0}
 100%{background-color: Yellow}
 }
 
 @-webkit-keyframes parpadeo {
-0% {background-color: ##9DCAD0}
+0% {background-color: #9DCAD0}
 100%{background-color: Yellow}
 }
 
