@@ -13,9 +13,7 @@ background-color: #66FF00;
 
 
 thead{
-background-color: #66FF00;
 color:white;
-border-bottom:5px dotted  white;
 text-align: center
 }
 
@@ -36,7 +34,6 @@ animation: parpadeo 1s;
 animation-iteration-count: 10;
 -webkit-animation-iteration-count: 10;
 -moz-animation-iteration-count: 10;
-background-color: ##9DCAD0;
 }
 
 .atencion2{
