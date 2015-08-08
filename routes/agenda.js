@@ -32,7 +32,16 @@ module.exports = function(app,ss) {
   	res.send(agenda);
   };
 
+
+  rebootAgenda = function(req, res) {
+   
+    ss.api.publish.all('reboot', 'reboot');
+
+    res.send('OK');
+  };
+
   app.post('/agenda', addAgenda);
+  app.post('/reboot', rebootAgenda);
 
   app.get('/', function (req, res) {
         res.serve('main')}

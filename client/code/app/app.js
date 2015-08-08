@@ -1,15 +1,17 @@
 'use strict';
 
+
+
+
+ss.event.on('reboot', function(message) {
+
+  location.reload();
+  return;
+
+});
+
 // Listen out for newMessage events coming from the server
 ss.event.on('newMessage', function(message) {
-
-
-  setTimeout(function(){
-      if ($('#chatlog tr').length > 0) {
-        $('#chatlog tr').remove();
-      }
-    }, 1800000);
-
 
   //si existe la agenda no lo notificamos
   if(document.getElementById(message._id))
@@ -43,7 +45,17 @@ ss.event.on('newMessage', function(message) {
     $('#chatlog tr').slice(1,2).remove();
   }
 
+  $(html).appendTo('#chatlog');
+
+  if(document.getElementById(message._id))
+  {
+     setTimeout(function(){
+        document.getElementById(message._id).remove();
+    }, 3600000 );
+
+  }
+
 
   // Append it to the #chatlog div and show effect
-  return $(html).appendTo('#chatlog');
+  return ;
 });
