@@ -132,6 +132,8 @@ animation-iteration-count: 10;
 
 
 #presentacion{
-   width="100%" 
-   height="500px"
+   margin: auto;
+   width = "100%" ;
+   height = "550px";
+   margin-bottom: 20px;
 }
