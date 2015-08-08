@@ -42,7 +42,7 @@ ss.event.on('newMessage', function(message) {
   if($('#chatlog tr').size() > 7)
   {
    // $('#tablaEspera tr').slice(1,2).slideUp(500);
-    $('#chatlog tr').parentNode.slice(1,2).remove();
+    $('#chatlog tr').slice(1,2).remove();
   }
 
   $(html).appendTo('#chatlog');
