@@ -31,7 +31,7 @@ exports.actions = function(req, res, ss) {
             else
             {
               //console.log('borramos'+agenda);
-              //agenda.remove();
+              agenda.remove();
             }
             //console.log(agenda);
           });

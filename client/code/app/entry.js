@@ -10,9 +10,8 @@ ss.server.on('disconnect', function(){
 
 ss.server.on('reconnect', function(){
   
-  var d = new Date();
-  console.log('Connection back up :-)'+document.cookie);
-  
+  console.log('Connection back up :-)');
+   ss.rpc('auth.authenticate', document.cookie);
   ss.rpc('demo.sendMessage', document.cookie);
 
  

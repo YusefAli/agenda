@@ -37,7 +37,7 @@ module.exports = function(app,ss) {
    
     ss.api.publish.all('reboot', 'reboot');
 
-    res.send('OK');
+    res.send(true);
   };
 
   app.post('/agenda', addAgenda);
