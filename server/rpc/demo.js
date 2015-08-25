@@ -7,7 +7,7 @@ var Agenda = require('../../models/agenda.js');
 exports.actions = function(req, res, ss) {
 
   // Example of pre-loading sessions into req.session using internal middleware
-  req.use('session');
+  //req.use('session');
 
   // Uncomment line below to use the middleware defined in server/middleware/example
   //req.use('example.authenticated')
