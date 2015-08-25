@@ -7,7 +7,7 @@ var Agenda = require('../../models/agenda.js');
 exports.actions = function(req, res, ss) {
 
   // Example of pre-loading sessions into req.session using internal middleware
-  req.use('session');
+  //req.use('session');
 
   // Uncomment line below to use the middleware defined in server/middleware/example
   //req.use('example.authenticated')
@@ -15,11 +15,10 @@ exports.actions = function(req, res, ss) {
   return {
 
     sendMessage: function(message) {
-      req.session.setUserId(message);
-      console.log('dentro de rpc'+message);
+      //req.session.setUserId(message);
+      console.log('sendMessage: '+message);
       Agenda.find({}, function(err, agendas) {
         if(!err) {
-          console.log('GET /agendas')
           var fecha = new Date();
           agendas.forEach(function(agenda) {
             //5 minutos
