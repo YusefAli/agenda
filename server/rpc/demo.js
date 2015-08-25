@@ -25,8 +25,8 @@ exports.actions = function(req, res, ss) {
             //5 minutos
             if(agenda.insertado > fecha.getTime() - 300000)
             {
-              //ss.publish.user(message,'newMessage', agenda);  
-              ss.publish.all('newMessage', agenda);
+              ss.publish.user(message,'newMessage', agenda);  
+              //ss.publish.all('newMessage', agenda);
             }
             else
             {
