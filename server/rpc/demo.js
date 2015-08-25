@@ -15,8 +15,8 @@ exports.actions = function(req, res, ss) {
   return {
 
     sendMessage: function(message) {
-      req.session.setUserId(message);
-      console.log('dentro de rpc'+message);
+      //req.session.setUserId(message);
+      console.log('sendMessage '+message);
       Agenda.find({}, function(err, agendas) {
         if(!err) {
           console.log('GET /agendas')

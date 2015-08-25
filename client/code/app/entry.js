@@ -10,7 +10,7 @@ ss.server.on('disconnect', function(){
 ss.server.on('reconnect', function(){
   
   console.log('Connection back up :-)');
-  ss.rpc('demo.sendMessage', document.cookie);
+  ss.rpc('demo.sendMessage', "reconnect");
 
  
 });
@@ -26,8 +26,9 @@ ss.server.on('ready', function(){
   });
 
 
-  ss.rpc('auth.authenticate', document.cookie);
-  ss.rpc('demo.sendMessage', document.cookie);
+  //ss.rpc('auth.authenticate', document.cookie);
+  //ss.rpc('demo.sendMessage', document.cookie);
+  ss.rpc('demo.sendMessage', "ready");
  
 
 });
