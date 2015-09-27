@@ -10,12 +10,42 @@ module.exports = function(app,ss) {
     var agenda = new Agenda({
       nif:    req.param('NIFMIO'),
       consulta:  req.param('consulta'),
+      nombre:  req.param('nombre'),
       insertado: fecha.getTime()
     });
-
-    if (isNaN(agenda.consulta)) {
-      agenda.consulta='';
+  
+    if (isNaN(agenda.consulta) || !agenda.consulta) {
+      switch (agenda.nombre)
+            {
+               case 'MMR_ILLES': agenda.consulta='1';
+               break; 
+               case 'FR_ILLES': agenda.consulta='1';
+               break; 
+               case 'VHE_ILLE': agenda.consulta='2';
+               break;    
+               case 'ALM_ILLE': agenda.consulta='2';
+               break;
+               case 'FAS_ILLE': agenda.consulta='2';
+               break;
+               case 'FGH_ILLE': agenda.consulta='2';
+               break;
+               case 'VM_ILLES': agenda.consulta='7';
+               break;
+               case 'LPI_ILLE': agenda.consulta='7';
+               break;
+               case 'PBP_ILLE': agenda.consulta='3';
+               break;
+               case 'EEM_ILLE': agenda.consulta='3';
+               break;
+               default:  agenda.consulta=''
+            };
+      
     };
+
+    if(agenda.consulta==='0')
+    {
+      agenda.consulta='ATS'
+    }
 
   //  agenda._id=agenda.nif + agenda.consulta;
     ss.api.publish.all('newMessage', agenda);
