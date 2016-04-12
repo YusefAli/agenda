@@ -12,6 +12,7 @@ var agendaSchema = new Schema({
 	vinoold: 		{ type: String },
 	vino: 			{ type: String },
 	consulta: 		{ type: String },
+	centro: 		{ type: String },
 	insertado: 		{ type: Number }
 	
 });

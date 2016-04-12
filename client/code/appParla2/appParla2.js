@@ -3,7 +3,7 @@
 
 
 
-ss.event.on('reboot', function(message) {
+ss.event.on('rebootParla2', function(message) {
 
   location.reload();
   return;
@@ -11,7 +11,7 @@ ss.event.on('reboot', function(message) {
 });
 
 // Listen out for newMessage events coming from the server
-ss.event.on('newMessage', function(message) {
+ss.event.on('newMessageParla2', function(message) {
 
   //si existe la agenda no lo notificamos
   if(document.getElementById(message._id))

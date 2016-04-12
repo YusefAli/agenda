@@ -17,15 +17,27 @@ exports.actions = function(req, res, ss) {
     sendMessage: function(message) {
       //req.session.setUserId(message);
       console.log('sendMessage: '+message);
-      Agenda.find({}, function(err, agendas) {
+      Agenda.find({ 'centro': message }, function(err, agendas) {
         if(!err) {
           var fecha = new Date();
           agendas.forEach(function(agenda) {
             //5 minutos
             if(agenda.insertado > fecha.getTime() - 300000)
             {
-              //ss.publish.user(message,'newMessage', agenda);  
-              ss.publish.all('newMessage', agenda);
+              //ss.publish.user(message,'newMessage', agenda); 
+              if(agenda.centro=='PARLA')
+              {
+                ss.publish.all('newMessageParla', agenda);
+              } 
+              else if(agenda.centro=='PARLA2')
+              {
+                ss.publish.all('newMessageParla', agenda);
+              } 
+              else
+              {
+                ss.publish.all('newMessage', agenda);
+              }
+              
             }
             else
             {

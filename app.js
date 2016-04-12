@@ -10,14 +10,47 @@ var http = require('http'),
 // Define a single-page client called 'main'
 ss.client.define('main', {
   view: 'app.html',
-  css:  ['libs/reset.css', 'app.css'],
+  css:  ['app.css'],
   code: ['libs/jquery.min.js', 'app'],
+  tmpl: '*'
+});
+
+ss.client.define('parla', {
+  view: 'app.html',
+  css:  ['app.css'],
+  code: ['libs/jquery.min.js', 'appParla'],
+  tmpl: '*'
+});
+
+ss.client.define('parla2', {
+  view: 'app.html',
+  css:  ['app.css'],
+  code: ['libs/jquery.min.js', 'appParla2'],
+  tmpl: '*'
+});
+
+ss.client.define('parlaEntrada', {
+  view: 'appEntrada.html',
+  css:  ['libs/appEntrada.css'],
+  code: ['libs/jquery.min.js', 'appParlaEntrada'],
   tmpl: '*'
 });
 
 // Serve this client on the root URL
 ss.http.route('/', function(req, res){
   res.serveClient('main');
+});
+
+ss.http.route('/parla', function(req, res){
+  res.serveClient('parla');
+});
+
+ss.http.route('/parla2', function(req, res){
+  res.serveClient('parla2');
+});
+
+ss.http.route('/parlaEntrada', function(req, res){
+  res.serveClient('parlaEntrada');
 });
 
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
@@ -44,9 +77,9 @@ app.configure(function () {
 routes = require('./routes/agenda')(app,ss);
 
 
-//mongoose.connect('mongodb://localhost/agenda2', function(err, res) {
+mongoose.connect('mongodb://localhost/agenda', function(err, res) {
 
-mongoose.connect('mongodb://wellcare:wellcare@ds055792.mongolab.com:55792/agenda', function(err, res) {
+//mongoose.connect('mongodb://wellcare:wellcare@ds055792.mongolab.com:55792/agenda', function(err, res) {
 	if(err) {
 		console.log('ERROR: connecting to Database. ' + err);
 	} else {
@@ -54,8 +87,10 @@ mongoose.connect('mongodb://wellcare:wellcare@ds055792.mongolab.com:55792/agenda
 	}
 });
 
-server.listen(80, function() {
-  console.log("Node server running on"+ 80);
+
+
+server.listen(process.env.PORT || 8080, function() {
+  console.log("Node server running on"+ 8080);
 });
 
 // Start SocketStream

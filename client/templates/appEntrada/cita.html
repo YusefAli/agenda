@@ -1,0 +1,21 @@
+
+<div class="jumbotron">
+	<h1>Bienvenido a Wellacare</h1>
+	<p>{{message.nombre}} {{message.apellido1}} {{message.apellido2}}</p>
+		{{#message.numCitas}}
+			<h2><span class="alert alert-success" role="alert">Hoy tiene las siguientes citas:</span></h2>
+				{{#message.citas}}
+					<div class="glyphicon glyphicon-calendar btn btn-info btn-lg btn-block">
+					  <h2>{{acto}}</h2>
+					  <p><b>Médico:</b>{{medico}}</p>
+					  <p><b>Hora:</b>{{hora}}</p>
+					  <p><b>Pinche aquí para indicar que ha llegado</b></p>
+					</div>
+				{{/message.citas}}
+			<h3 class="alert alert-success" role="alert">Pinche en la cita para confirmar asistencia</h3>
+			<h2 class="alert alert-warning" role="alert">No olvide dejar la tarjeta en recepción</h2>
+		{{/message.numCitas}}
+	{{^message.numCitas}} 
+		  <h2 class="alert alert-info" role="alert">Hoy no tiene citas</h2>
+	{{/message.numCitas}}
+</div>

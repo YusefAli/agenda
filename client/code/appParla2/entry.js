@@ -10,10 +10,8 @@ ss.server.on('disconnect', function(){
 ss.server.on('reconnect', function(){
   
   console.log('Connection back up :-)');
-
-
-    console.log('ILLESCAS');
-    ss.rpc('demo.sendMessage', 'ILLESCAS');
+    console.log('PARLA2');
+    ss.rpc('demo.sendMessage', 'PARLA2');
 
  
 });
@@ -33,15 +31,15 @@ ss.server.on('ready', function(){
 
 //vid.addEventListener('ended',myHandlerVideo,false);
   //  function myHandlerVideo(e) {
-    //    document.getElementById('video').currentTime=0;
-      //  document.getElementById('video').play();
-    //}
-  //vid.play();
+   //     document.getElementById('video').currentTime=0;
+  //      document.getElementById('video').play();
+  //  }
+//  vid.play();
   
   //ss.rpc('auth.authenticate', document.cookie);
+    console.log('PARLA2');
+    ss.rpc('demo.sendMessage', 'PARLA2');
 
-    console.log('ILLESCAS');
-    ss.rpc('demo.sendMessage', 'ILLESCAS');
  
 
 });
