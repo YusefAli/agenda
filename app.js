@@ -90,7 +90,7 @@ mongoose.connect('mongodb://localhost/agenda', function(err, res) {
 
 
 server.listen(process.env.PORT || 80, function() {
-  console.log("Node server running on"+ rocess.env.PORT);
+  console.log("Node server running on"+ process.env.PORT);
 });
 
 // Start SocketStream
